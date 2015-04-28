@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mavenmultimodule</groupId>
+		<artifactId>customersrv-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>customersrv-dao</artifactId>
+	<name>customersrv-dao</name>
+
+	<dependencies>
+		<!-- mongodb java driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<!-- Spring data mongodb -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.7.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mavenmultimodule</groupId>
+			<artifactId>customersrv-beans</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+</project>
