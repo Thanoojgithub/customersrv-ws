@@ -16,7 +16,6 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.customersrv.beans.vo.SavedUser;
 import com.customersrv.beans.vo.User;
 
 @Path("/services")
@@ -70,7 +69,7 @@ public interface CustomerWsRs {
 	@PUT
 	@Path("/upsertUser")
 	@Produces(MEDIATYPE_CHARSET)
-	public @ResponseBody SavedUser upsertUser(@QueryParam("id") Long id,
+	public @ResponseBody void upsertUser(@QueryParam("id") Long id,
 										      @QueryParam("firstName") String firstName,
 											  @QueryParam("lastName") String lastName,
 											  @QueryParam("location") String location);

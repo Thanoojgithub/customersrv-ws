@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.customersrv.beans.vo.SavedUser;
 import com.customersrv.beans.vo.User;
 import com.cutomersrv.blogic.service.CustomerServiceImpl;
 
@@ -45,8 +44,8 @@ public class CustomerWsRsImpl implements CustomerWsRs {
 	}
 
 	@Override
-	public SavedUser upsertUser(Long id, String firstName, String lastName, String location) {
-		return customerServiceImpl.upsertUser(id, firstName, lastName, location);
+	public void upsertUser(Long id, String firstName, String lastName, String location) {
+		customerServiceImpl.upsertUser(id, firstName, lastName, location);
 	}
 
 }

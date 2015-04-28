@@ -16,7 +16,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.customersrv.beans.vo.SavedUser;
 import com.customersrv.beans.vo.User;
 import com.cutomersrv.dao.repository.CustomerRepositoryImpl;
 
@@ -75,14 +74,13 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public SavedUser upsertUser(Long id, String firstName, String lastName, String location) {
-		SavedUser persisted = new SavedUser();
+	public void upsertUser(Long id, String firstName, String lastName, String location) {
+		User persisted = new User();
 		persisted.setId(id);
 		persisted.setFirstName(firstName);
 		persisted.setLastName(lastName);
 		persisted.setLocation(location);
-		SavedUser save = customerRepositoryImpl.save(persisted);
-		return save;
+		customerRepositoryImpl.save(persisted);
 	}
 
 	@Override

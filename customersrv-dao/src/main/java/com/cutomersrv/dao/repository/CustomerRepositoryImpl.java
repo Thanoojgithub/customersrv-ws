@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
-import com.customersrv.beans.vo.SavedUser;
 import com.customersrv.beans.vo.User;
 
 @Component
@@ -21,7 +20,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	public void delete(Long id) {
 		Query query = new Query();
 		query.addCriteria(Criteria.where("id").is(id));
-		mongoOperations.findAndRemove(query, SavedUser.class);
+		mongoOperations.findAndRemove(query, User.class);
 	}
 
 	@Override
@@ -37,9 +36,8 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 	}
 
 	@Override
-	public SavedUser save(SavedUser persisted) {
-		mongoOperations.save(persisted);
-		return persisted;
+	public void save(User persisted) {
+	mongoOperations.save(persisted);
 	}
 
 }

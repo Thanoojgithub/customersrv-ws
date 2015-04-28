@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.customersrv.beans.vo.SavedUser;
 import com.customersrv.beans.vo.User;
 
 @Component
@@ -40,7 +39,7 @@ public interface CustomerService {
 
 	public void deleteUser(Long id);
 
-	public SavedUser upsertUser(Long id, String firstName, String lastName, String location);
+	public void upsertUser(Long id, String firstName, String lastName, String location);
 
 	
 
