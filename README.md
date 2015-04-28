@@ -9,3 +9,13 @@ added
 - cutomersrv-dao (dao - calling MongoOperations, mongoDB using spring-data-mongodb)
 - cutomersrv-blogic (service - having user defind logic, calling DAO methods)
 - cutomersrv-ws (ws - war file, which has RESTFul service resouce paths and congiguring cxf, mongoDB using spring-data-mongodb)
+
+
+
+prerequisites
+
+- JDK
+- maven
+- MongoDB installer
+  - just using installer, we can have MOngoDB server as a system service (start/stop)
+  - we do use default properties to access MongoDB
