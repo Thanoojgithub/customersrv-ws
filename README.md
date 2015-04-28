@@ -1,5 +1,5 @@
 # customersrv-ws
-multi module project
+multi module project (using Spring, cxf RESTFul, Spring Data, MongoDB)
 
 
 added 
