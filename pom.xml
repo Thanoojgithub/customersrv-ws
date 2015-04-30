@@ -16,7 +16,7 @@
 		<dependencies.cglib.version>3.1</dependencies.cglib.version>
 		<dependencies.jackson.version>1.9.13</dependencies.jackson.version>
 	</properties>
-
+	<!-- list of modules -->
 	<modules>
 		<module>customersrv-client</module>
 		<module>customersrv-beans</module>
